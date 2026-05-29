@@ -1,0 +1,66 @@
+2.1) for 'often' renturns the index and for 'never' it will return -1 because there is no 'never' in the values
+2.2)Search.linear calls a function inside of the search.py file. This function takes two inputs; a list and a key.
+    The function linearly loops over the given list and will return the index if it finds the key inside of the list.
+    For example: search.linear(['apple', 'pear', 'orange', 'pineapple'], 'orange') will return 2 because orange has an index of 2.
+2.3)A) This will give return 'does not occur' instead -1
+    B)If search starts with the index of 1 it always misses the index of 0 and first item will be uncheched
+    C) If you input a key in the function that is not part of the list it will loop until the last item in the array.
+        However because i <= len(data) is still true it will continue to do another loop. But because i has reached an index higher
+        than that of the array it throws an index out of bounds error.
+    D) The results will be the exact same but the index will count down during looping instead of left to right
+2.7)1. Make an estimation on the location of the word in the dictionary
+    2. Open the book on the estimated location
+    3. Check if the word you are looking for is in the estimated location if so stop looking if not continue to line 4
+    4. Check werther the location of the book is to the right or to the left of the estimated location using the first letter
+       of the word in combination with the alphabet.
+    5. Estimate a new location and jump back to line 3
+2.9) The value for mid will always be the same as the resulting index unless the value is not present in the data, ergo mid will be 62.
+    To calculate the lower and upper bound we just follow the algorithm step by step:
+    1. mid: 100 low: 0 high: 200
+    2. mid: 49 low: 0 high: 99
+    3. mid: 74 low: 50 high: 99
+    4. mid: 61 low: 50 high: 73
+    5. mid: 67 low: 62 high: 73
+    6. mid: 64 low: 62 high: 66
+    7. mid: 62 low: 62 high: 63 Are the final values
+2.10)1) You must take sorting time into consideration. Because binary search can only be used on sorted lists, which requires time, 
+        its temporal complexity is O. (nlogn). It will be higher in your case because you sorted it after the timer started.
+
+     2) You are using a Binary Search in a situation where the element you are looking for, -1, does not exist in the list. 
+       The worst case of binary search involves so many leaps that the element is never found.
+
+     (a) - The linear search takes twice as long because it reads every single value in the worst case.
+           So when the amount of the data doubles it check twice as many values.
+         - The binary search still takes more time to search for the value compared to small sets of data,
+           however it's still considerably faster than the linear search because it doesn't check every single
+           value.
+     (b) - For linear it takes twice as long when doubled so the time complexity is equal to never
+           O👎
+         - O(log(n))
+2.11 (b) - The smallest difference is achieved by searching for the first word (aa) in the dictionary since that would be the first
+           word in the dictionary, with 0 micros. It could still be faster but it already takes binary 0 micros to complete it so it doesn't matter
+     (c) - The largest difference is achieved when choosing the last word in the dictionary because the linear search needs to check all values.
+2.12 The algorithm follows the following steps to sort the list of data: 2 4 1 3
+     - Check if the first value is larger then the second if so swap ( new data: 2 4 1 3 )
+     - Check if the 2nd value is larger then the 3rd, it is so it is swapped ( new data: 2 1 4 3 )
+     - Check if the 3rd value is larger then the 4th, it is so swap ( new data: 2 1 3 4 )
+     - Go back to the start because all values have been changed
+     - Check if the 1st value is larger than the second, it is so swap ( new data: 1 2 3 4 )
+     - The data is now sorted
+2.13 (a) If the array is already sorted it will loop over all values once
+     (b) If the array is in revers order the algorithm will take the longest because it needs to cycle over 
+         the data set the amount of times as the length of the dataset itself.
+2.16)-append adds its argument as a single element to the end of a list. The length of the list itself will increase by one.
+     -extend iterates over its argument adding each element to the list, extending the list. 
+      The length of the list will increase by however many elements were in the iterable argument.
+     (a)for append:a=[1,2,[3]]
+        for extend:a=[1, 2, 3]
+     (b)for append:a=[1,2,[3,4]]
+        for extend:a=[1, 2, 3, 4]
+2.17)for bubble its 0.03324s
+     for merge its 0.03125s
+2.18)Bubble sort is O(n2) and Merge Sort is O(nlogn). 
+     So, on a small set it wont be that different but on a lot of data Bubble sort will be much slower.
+2.20)a)
+     b)
+2.21
